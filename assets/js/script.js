@@ -9,7 +9,7 @@ let username = prompt("Hello,what's your name?");
 
 let welcome = document.createElement("h1");
 welcome.textContent = `Welcome ${username},thanks for using my counter`;
-if (username ==="") {
+if (username ==="" || typeof(username)==="null") {
   welcome.textContent = "Welcome user,thanks for using my counter"
 }
 welcome.classList.add("welcome");
