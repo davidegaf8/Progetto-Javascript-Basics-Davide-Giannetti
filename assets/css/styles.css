@@ -139,8 +139,7 @@ body {
     top: 0;
     background-color: rgb(240, 240, 240);
     z-index: 1;
-    border-left: 1px solid black;
-    animation:typing 10s steps(20) infinite,pulse 10s infinite ;
+    animation:typing 10s steps(20) infinite,pulseBlack 10s infinite ;
     transition: all .3s;
 }
 
@@ -158,7 +157,7 @@ body {
     }
 }
 
-@keyframes pulse {
+@keyframes pulseBlack{
    0% {
     border-left:1px solid black;
    }
@@ -207,13 +206,43 @@ body.dark {
 }
 .welcome.dark::after {
     background-color: black;
-    border-left:1px solid white;
+    animation:typing 10s steps(20) infinite,pulseWhite 10s infinite;
 }
 
 .welcome.dark {
     color: rgb(61, 100, 255);
 }
 
+@keyframes pulseWhite{
+    0% {
+     border-left:1px solid white
+    }
+ 
+    30% {
+     border-left: 1px solid white;
+    }
+    35% {
+     border-left: none;
+    }
+    45% {
+     border-left: 1px solid white;
+    }
+    55% {
+     border-left:none;
+    }
+    65% {
+     border-left:1px solid white;
+    }
+    75% {
+     border-left:none;
+    }
+    85% {
+     border-left:1px solid white;
+    }
+    95% {
+     border-left:none;
+    }
+ }
 /*MEDIA QUERY*/
 
 @media screen and (max-width:900px) {
